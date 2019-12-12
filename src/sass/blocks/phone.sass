@@ -1,0 +1,19 @@
+.phone
+  &__link
+    display: inline-block
+    margin-bottom: 10px
+    font-family: $second-font
+    font-size: 18px
+    line-height: 1
+    color: #fff
+  &__callback, &__email
+    font-size: 14px
+    text-decoration: underline
+
++media-breakpoint-down(xs)
+  .phone
+    &__link
+      font-size: 14px
+      margin-bottom: 5px
+    &__callback
+      font-size: 14px

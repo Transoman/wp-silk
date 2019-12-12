@@ -1,0 +1,157 @@
+.services
+  position: relative
+  padding-bottom: 200px
+  z-index: 1
+  .container
+    position: relative
+    z-index: 1
+  &__wrap
+    position: relative
+  .section-title
+    margin-bottom: 135px
+  &__count
+    position: absolute
+    right: 0
+    top: 100px
+    max-width: 320px
+    &--number
+      margin: 0
+      font-family: $second-font
+      font-size: 42px
+      color: #fff
+      span
+        font-size: 128px
+        vertical-align: top
+        line-height: 1
+        letter-spacing: -10px
+    &--desc
+      font-size: 16px
+      color: $santas-gray
+
+.services-list
+  &__item
+    position: relative
+    h3
+      margin-bottom: 20px
+      font-family: $second-font
+      font-size: 24px
+    p
+      margin-bottom: 20px
+      font-size: 16px
+      color: #fff
+      &:last-child
+        margin-bottom: 35px
+    &:nth-child(2)
+      margin-top: 170px
+    &:nth-child(3)
+      margin-top: 370px
+    &:nth-child(4)
+      margin-top: -170px
+      margin-left: 120px
+  &__inner
+    position: relative
+    padding-right: 60px
+    padding-top: 105px
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 0
+      height: 0
+      border-radius: 50%
+      z-index: -1
+    &--orange
+      &::before
+        box-shadow: 0 0 115px 25px rgba($balze-orange, 0.8)
+    &--green
+      &::before
+        box-shadow: 0 0 115px 25px rgba($accent, 0.8)
+    &--blue
+      &::before
+        box-shadow: 0 0 115px 25px rgba($azure-radiance, 0.8)
+    &--pink
+      &::before
+        box-shadow: 0 0 115px 25px rgba($amaranth, 0.8)
+
++media-breakpoint-down(lg)
+  .services
+    padding-bottom: 125px
+
+  .services-list
+    &__item
+      &:nth-child(3)
+        margin-top: 0
+      &:nth-child(4)
+        margin-left: 0
+        margin-top: 170px
+
++media-breakpoint-down(md)
+  .services-list
+    padding: 0
+    margin-bottom: 60px
+    &__item
+      margin-bottom: 70px
+      &:nth-child(2),
+      &:nth-child(4)
+        margin-top: 0
+    &__inner
+      padding-right: 0
+      padding-top: 80px
+    &__icon
+      img
+        width: 60px
+
+  .services
+    .section-title
+      margin-bottom: 100px
+    &__count
+      position: static
+      top: auto
+      right: auto
+      margin: 0 auto
+
++media-breakpoint-down(sm)
+  .services-list
+    &__item
+      h3
+        font-size: 20px
+        br
+          display: none
+      p
+        br
+          display: none
+
++media-breakpoint-down(xs)
+  .services-list
+    margin-bottom: 0
+    &__item
+      text-align: center
+      p
+        margin-bottom: 10px
+    &__icon
+      left: 50%
+      transform: translateX(-50%)
+
+  .services
+    padding-bottom: 80px
+    &::before
+      top: -30px
+      width: 60px
+      height: 90px
+    &::after
+      width: 60px
+      height: 190px
+    .section-title
+      margin-bottom: 70px
+    &__count
+      padding: 0 55px
+      &--number
+        span
+          font-size: 90px

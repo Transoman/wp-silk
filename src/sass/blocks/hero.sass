@@ -1,0 +1,94 @@
+.hero
+  padding-top: 200px
+  padding-bottom: 400px
+  @media only screen and (max-height: 768px) and (min-width: 1200px) and (max-width: 1366px)
+    padding-top: 150px
+  &__content
+    position: relative
+    margin-bottom: 75px
+    z-index: 2
+    h1
+      @media only screen and (max-height: 768px) and (min-width: 1200px) and (max-width: 1366px)
+        font-size: 60px
+    p
+      font-size: 30px
+      line-height: 1.3
+      @media only screen and (max-height: 768px) and (min-width: 1200px) and (max-width: 1366px)
+        font-size: 26px
+      &:last-child
+        margin-bottom: 0
+  &__form
+    position: relative
+    float: right
+    padding-right: 70px
+    z-index: 1
+    &::before
+      content: ''
+      position: absolute
+      top: -190px
+      left: -220px
+      width: 810px
+      height: 470px
+      background: url('images/general/hero-form-bg.png') no-repeat center top
+      z-index: -1
+    h3
+      margin: 0
+      font-size: 30px
+      line-height: 1
+    p
+      margin-bottom: 25px
+      font-size: 18px
+    .form-group--btn
+      width: 100%
+      max-width: none
+      text-align: right
+      .form__btn
+        margin-right: 20px
+
++media-breakpoint-down(lg)
+  .hero
+    padding-top: 180px
+    padding-bottom: 150px
+    &__content
+      p
+        font-size: 30px
+
++media-breakpoint-down(md)
+  .hero
+    padding-top: 150px
+    padding-bottom: 120px
+    &__content
+      margin-bottom: 40px
+    &__form
+      float: none
+      padding-right: 0
+
++media-breakpoint-down(sm)
+  .hero
+    text-align: center
+    &__content
+      p
+        font-size: 24px
+    &__form
+      h3
+        font-size: 30px
+      p
+        font-size: 22px
+      .form-group--btn
+        text-align: center
+        .form__btn
+          margin-right: 0
+
++media-breakpoint-down(xs)
+  .hero
+    padding-bottom: 80px
+    .section-title
+      margin-bottom: 50px
+    &__content
+      p
+        font-size: 22px
+    &__form
+      h3
+        font-size: 26px
+      p
+        font-size: 18px
