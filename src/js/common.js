@@ -33,17 +33,29 @@ jQuery(document).ready(function($) {
     });
   };
 
-  window.addEventListener('scroll', function() {
-    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    var header = document.querySelector('.header');
+  // Fixed header
+  let fixedHeader = function(e) {
+    let header = $('.header');
 
-    if (scrolled >= 80) {
-      header.classList.add('sticky');
+    if (e.scrollTop() > 80) {
+      header.addClass('sticky');
     }
     else {
-      header.classList.remove('sticky');
+      header.removeClass('sticky');
     }
-  });
+  };
+
+  // window.addEventListener('scroll', function() {
+  //   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  //   var header = document.querySelector('.header');
+  //
+  //   if (scrolled >= 80) {
+  //     header.classList.add('sticky');
+  //   }
+  //   else {
+  //     header.classList.remove('sticky');
+  //   }
+  // });
 
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -178,4 +190,9 @@ jQuery(document).ready(function($) {
 
   toggleNav();
   initModal();
+  fixedHeader($(this));
+
+  $(window).scroll(function() {
+    fixedHeader($(this));
+  });
 });

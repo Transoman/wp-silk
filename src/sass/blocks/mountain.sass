@@ -2,12 +2,16 @@
   position: relative
   min-height: 770px
   -webkit-backface-visibility: hidden
+  +r(1200)
+    min-height: 550px
   &-scene
     position: relative
     margin: 0
     padding: 0
     list-style: none
     min-height: 770px
+    +r(1200)
+      min-height: 550px
   .layer
     width: 100%
     height: 100%
@@ -17,61 +21,46 @@
       top: 0
       left: 0
       right: 0
-      height: 100% //740px
+      height: 100%
       background: url('images/general/asteroid_main.png') no-repeat center bottom / contain
     &-2
       top: 50%
       transform: translateY(-50%)
       left: 0
-      width: 28.08% //530px
-      height: 66.23% //510px
+      width: 28.08%
+      height: 66.23%
       background: url('images/general/big_left.png') no-repeat center bottom / contain
     &-3
       top: 50%
       transform: translateY(-50%)
       right: 0
-      width: 25.33% //470px
-      height: 69.42% //535px
+      width: 25.33%
+      height: 69.42%
       background: url('images/general/big_right.png') no-repeat center bottom / contain
     &-4
       top: 30%
       right: 30%
-      width: 14.8% //280px
-      height: 30% //230px
+      width: 14.8%
+      height: 30%
       background: url('images/general/mid1.png') no-repeat center bottom / contain
     &-5
       top: 30%
       left: 30%
-      width: 9% //170px
-      height: 33.8% //260px
+      width: 9%
+      height: 33.8%
       background: url('images/general/mid2.png') no-repeat center bottom / contain
     &-6
       bottom: 10%
       left: 40%
-      width: 10.3% //195px
-      height: 17.6% //135px
+      width: 10.3%
+      height: 17.6%
       background: url('images/general/mid3.png') no-repeat center bottom / contain
     &-7
       top: 10%
       right: 25%
-      width: 5.6% //105px
-      height: 14.3% //110px
+      width: 5.6%
+      height: 14.3%
       background: url('images/general/mid4.png') no-repeat center bottom / contain
-    // &-3
-    //   top: 50px
-    //   right: -5%
-    //   height: 1129px
-    //   background: url('../img/mountains_right.png') no-repeat center bottom / cover
-    // &-4
-    //   top: 50px
-    //   left: -5%
-    //   height: 1129px
-    //   background: url('../img/mountains_left.png') no-repeat center bottom / cover
-
-// +media-breakpoint-down(md)
-//   .mountain-item-1
-//     top: 10px
-//     left: -7%
 
 +media-breakpoint-down(lg)
   .mountain

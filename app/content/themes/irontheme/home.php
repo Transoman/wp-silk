@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#000">
 	<?php wp_head(); ?>
 </head>
-<body id="top">
+<body id="top" <?php body_class(); ?>>
 
 <header class="header">
   <div class="container">
@@ -95,7 +95,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/images/general/icon-services-1.svg" width="90" height="70" alt="">
             </div>
             <h3>Лендинг пейдж и сайты визитки</h3>
-            <p>Создаем инструменты для продаж <br>в интернете, а также знакомим <br>клиентов с Вами.</p>
+            <p>Знакомим клиентов с Вами. Создаем инструменты для продаж в интернете.</p>
             <a href="#order-form" class="btn-trs">Заказать</a>
           </div>
         </div>
@@ -105,7 +105,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/images/general/icon-services-2.svg" width="70" height="75" alt="">
             </div>
             <h3>Интернет магазин</h3>
-            <p>Мы обеспечиваем множество клиентов <br>большим объемом продаж</p>
+            <p>Создаем площадку для Ваших продаж</p>
             <a href="#order-form" class="btn-trs">Заказать</a>
           </div>
         </div>
@@ -115,7 +115,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/images/general/icon-services-3.svg" width="70" height="80" alt="">
             </div>
             <h3>Корпоративные сайты</h3>
-            <p>Лицо компании. Упакуем Ваш бизнес под ключ</p>
+            <p>Лицо компании. Упакуем Ваш бизнес "под ключ"</p>
             <a href="#order-form" class="btn-trs">Заказать</a>
           </div>
         </div>
@@ -125,7 +125,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/images/general/icon-services-4.svg" width="65" height="70" alt="">
             </div>
             <h3>Полиграфия</h3>
-            <p>Разработка полиграфической продукции <br>в поддержку рекламной компании <br>и промо материалов.</p>
+            <p>Разработка полиграфической продукции и промо материалов в поддержку рекламной компании.</p>
             <a href="#order-form" class="btn-trs">Заказать</a>
           </div>
         </div>
@@ -182,7 +182,7 @@
         <div class="portfolio-slider swiper-container">
           <div class="swiper-wrapper">
             <?php while ($posts->have_posts()): $posts->the_post(); ?>
-              <div class="portfolio-slider__item swiper-slide" data-simplebar>
+              <div class="portfolio-slider__item swiper-slide" data-simplebar data-simplebar-auto-hide="false">
                 <?php the_post_thumbnail('full', array('class' => 'portfolio-slider__img')); ?>
               </div>
             <?php endwhile; wp_reset_postdata(); ?>
@@ -235,8 +235,8 @@
 
   <div class="section-form" id="order-form">
     <div class="container">
-      <h3>Закажи сайт который уже завтра <br>даст поток Вашему бизнесу!</h3>
-      <p class="section-desc">Обращаясь к нам, Вы получаете продуманное решение, которое позволит клиентам определиться с выбором в Вашу сторону, и поддержку 7 дней в неделю.</p>
+      <h3>Закажите сайт который уже завтра <br>даст ускорение Вашему бизнесу!</h3>
+      <p class="section-desc">Обращаясь к нам, Вы получаете продуманное решение, которое позволит Вашим клиентам сделать свой выбор.</p>
 
       <div class="section-form__form">
         <form class="form form--hr repeat-form">
@@ -264,7 +264,7 @@
   <div class="container">
     <div class="advantages__head">
       <h2 class="section-title">Наши сайты загрузят ваш отдел продаж на <span>101%</span></h2>
-      <p class="section-desc">Инструменты для продаж которые проектируем мы, продают с конверсией от 11%, а в сочетании с нашей рекламой вы получите интернет бизнес под ключ в два клика.</p>
+      <p class="section-desc">Инструменты для продаж которые проектируем мы, продают с конверсией от 11%, а в сочетании с нашей рекламой вы получите интернет бизнес "под ключ" в два клика.</p>
     </div>
 
     <ul class="advantages-list">
@@ -282,7 +282,7 @@
           <img src="<?php echo get_template_directory_uri(); ?>/images/general/icon-advantages-2.png" alt="">
         </div>
         <h3>Креативные концепции</h3>
-        <p>Можно сопротивляться вторжению армий, нельзя сопротивляться вторжению идей. <br>Виктор Гюго</p>
+        <p>"Можно сопротивляться вторжению армий, нельзя сопротивляться вторжению идей." <br><i>— Виктор Гюго</i></p>
       </li>
 
       <li class="advantages-list__item">
@@ -376,9 +376,9 @@
           02
           <img src="<?php echo get_template_directory_uri(); ?>/images/general/scale-2.svg" width="30" alt="">
         </div>
-        <h3>У меня небольшой бюджет, что делать?</h3>
+        <h3>Делаете ли вы продвижение?</h3>
         <div class="faq-list__content">
-          <p>Мы предлагаем вам рассрочку до 6 месяцев без процентов или подберем решение исходя из вашего бюджета. Также обращаем внимание, что качественная работа не может стоить ниже 25 000 рублей.</p>
+          <p>Мы специалисты узкого профиля, занимаемся дизайном и разработкой сайтов. Но мы сотрудничаем со специалистами, которые занимаются суто продвижением сайтов, так как у каждого своя компетенция и это позволяет добиваться максимального результата.</p>
         </div>
       </li>
       <li class="faq-list__item">
@@ -386,9 +386,9 @@
           03
           <img src="<?php echo get_template_directory_uri(); ?>/images/general/scale-3.svg" width="45" alt="">
         </div>
-        <h3>Можно подарок или скидку?</h3>
+        <h3>Станет ли сайт после разработки отображаться в поисковой системе при его поиске по названию?</h3>
         <div class="faq-list__content">
-          <p>Их есть у нас =) К любому нашему сайту  контекстную рекламу мы настраиваем в подарок! Также вы получите дополнительную скидку в 5% на все наши услуги, от рекламы до полиграфии.</p>
+          <p>Если сайт новоиспеченный, то ему нужно будет время для выхода в свет в поисковых системах. После этого он будет отражаться при поиске по названию.</p>
         </div>
       </li>
       <li class="faq-list__item">
@@ -396,9 +396,9 @@
           04
           <img src="<?php echo get_template_directory_uri(); ?>/images/general/scale-4.svg" width="80" alt="">
         </div>
-        <h3>Хочу встретиться и обсудить проект?</h3>
+        <h3>Обязательно ли мне писать подробное техническое задание? Как его составлять?</h3>
         <div class="faq-list__content">
-          <p>Будем Вам только рады! Но для начала нужно определить цели нашей встречи и в этом нам поможет небольшая анкета которую мы вам направим. После чего мы сформируем цену и будем ждать вас в согласованное время.</p>
+          <p>Техническое задание (ТЗ) прежде всего определяет что, когда и как должно быть выполнено. В ТЗ подробно и четко прописывается структура сайта или приложения (разделы и подразделы), требования к навигации, дизайну, функционалу. Если у вас нет ТЗ, не беспокойтесь. Мы всегда готовы помочь составить его и часто делаем это вместе с клиентом.</p>
         </div>
       </li>
       <li class="faq-list__item">
