@@ -13,7 +13,8 @@
     "wpackagist-plugin/force-regenerate-thumbnails": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/rocket-lazy-load": "*",
-    "wpackagist-plugin/wp-fastest-cache": "*"
+    "wpackagist-plugin/wp-fastest-cache": "*",
+    "wpackagist-plugin/safe-svg": "*"
   },
   "extra": {
     "wordpress-install-dir": "app/wp",
